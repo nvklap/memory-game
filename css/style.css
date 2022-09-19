@@ -89,6 +89,7 @@ body {
     var(--gradient-light),
     var(--gradient-dark)
   );
+  backface-visibility: hidden;
   border: 8px solid transparent;
   border-image: url(../img/border1.png) 12 stretch;
   border-radius: 10px;
