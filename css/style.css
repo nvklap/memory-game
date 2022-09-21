@@ -40,13 +40,16 @@ body {
 
 .header {
   grid-column: 1/4;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px;
   text-align: center;
   padding: 20px;
 }
 
 .main {
   grid-column: 2/3;
+  align-self: start;
+  display: flex;
+  justify-content: center;
 }
 
 .content {
@@ -162,5 +165,19 @@ body {
   }
   .wrapper {
     grid-template-columns: 10px minmax(300px, 600px) 10px;
+  }
+}
+
+@media (max-height: 560px) {
+  .card-board {
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+  }
+}
+
+@media (max-height: 430px) {
+  .card-board {
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
   }
 }
