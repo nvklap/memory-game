@@ -56,7 +56,7 @@ contentWrapper.addEventListener('click', openCard);
 function openCard({ target }) {
   if (
     target.closest('.card') &&
-    cardsQueue.length < 2 &&
+    cardsQueue.length < MAX_QUEUE_LENGTH &&
     !target.closest('.card').className.includes('open')
   ) {
     const chosenCard = target.closest('.card');
@@ -91,7 +91,7 @@ function manageChosenCards(queue, className, doMatch) {
 }
 
 function checkGameStatus() {
-  if (foundMatch === cardDeck.length / 2) {
+  if (foundMatch === cardsData.length) {
     gameMessageWrapper.classList.toggle('visible');
     showMessage(MESSAGE_WIN);
   }
