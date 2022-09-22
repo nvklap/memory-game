@@ -132,6 +132,7 @@ body {
 .game-message-wrapper.visible {
   display: flex;
 }
+
 .game-message-body {
   background-color: var(--light);
   border-radius: 5px;
@@ -162,6 +163,7 @@ body {
   .content {
     padding: 10px;
   }
+
   .wrapper {
     grid-template-columns: 10px minmax(300px, 600px) 10px;
   }
